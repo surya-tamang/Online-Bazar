@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.heropage {
+  background: url(/src/assets/heropage.jpeg) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.heropage .bgChange {
+  background-color: #464343;
+}
+.heropage nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e3e3e3;
+  position: sticky;
+  top: 0;
+}
+.heropage nav .logo h1 {
+  margin-left: 30px;
+  font-size: 30px;
+  padding: 15px 0;
+}
+.heropage nav ul {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+.heropage nav ul li {
+  padding: 10px 15px;
+}
+.heropage nav ul li .active {
+  color: #01B7F2;
+}
+.heropage nav ul li a {
+  color: #e3e3e3;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.heropage nav ul li a:hover {
+  color: #01B7F2;
+}
+.heropage nav ul li a i {
+  font-size: 8px;
+  font-weight: 100;
+  transform: rotate(90deg);
+  margin-left: 5px;
+}
+.heropage nav ul .dropdown {
+  position: relative;
+}
+.heropage nav ul .dropdown:hover .dropdown_list {
+  opacity: 1;
+}
+.heropage nav ul .dropdown .dropdown_list {
+  position: absolute;
+  left: 0;
+  display: block;
+  opacity: 0;
+  background-color: #464343;
+  top: 35px;
+  border-radius: 8px;
+}
+.heropage nav ul .dropdown .dropdown_list li {
+  padding: 10px 30px;
+}
+.heropage nav ul button {
+  border-radius: 8px;
+  border: 2px solid #01B7F2;
+  background-color: transparent;
+  color: #01B7F2;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+.heropage nav ul button:hover {
+  background-color: #01B7F2;
+  color: #ededed;
+}
+.heropage .hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10rem;
+}
+.heropage .hero article {
+  margin-left: 7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+  color: #e3e3e3;
+}
+.heropage .hero article h2 {
+  font-size: 46px;
+  font-weight: 900;
+}
+.heropage .hero article p {
+  font-size: 25px;
+}
+.heropage .hero article button {
+  border-radius: 8px;
+  border: 2px solid #01B7F2;
+  background-color: transparent;
+  color: #01B7F2;
+  padding: 15px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+.heropage .hero article button:hover {
+  background-color: #01B7F2;
+  color: #ededed;
+}/*# sourceMappingURL=main.css.map */

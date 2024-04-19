@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+
+$primary: #464343;
+$secondary : #01B7F2;
+$accent : #D9D9D9;
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin justiyCenter {
+    justify-content: center;
+}
+
+@mixin forBtn {
+    border-radius: 8px;
+    border: 2px solid $secondary;
+    background-color: transparent;
+    color: $secondary;
+}
+
+@mixin btnHover {
+    background-color: $secondary;
+    color: #ededed;
+}
+
+// main hero page
+
+.heropage {
+    background: url(/src/assets/heropage.jpeg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+
+    // for nav bar
+    .bgChange {
+        background-color: $primary;
+    }
+
+    nav {
+        @include flex();
+        justify-content: space-between;
+        color: #e3e3e3;
+        position: sticky;
+        top: 0;
+
+        .logo h1 {
+            margin-left: 30px;
+            font-size: 30px;
+            padding: 15px 0;
+        }
+
+        ul {
+            margin-right: 30px;
+            @include flex();
+
+            li {
+                padding: 10px 15px;
+
+                .active {
+                    color: $secondary;
+                }
+
+                a {
+                    color: #e3e3e3;
+                    font-size: 15px;
+                    transition: all 0.3s ease;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+
+                    i {
+                        font-size: 8px;
+                        font-weight: 100;
+                        transform: rotate(90deg);
+                        margin-left: 5px;
+                    }
+
+                }
+            }
+
+            .dropdown {
+                position: relative;
+
+                &:hover .dropdown_list{
+                    opacity: 1;
+                }
+
+                .dropdown_list {
+                    position: absolute;
+                    left: 0;
+                    display: block;
+                    opacity: 0;
+                    background-color: $primary;
+                    top: 35px;
+                    border-radius: 8px;
+
+
+                    li {
+                        padding: 10px 30px;
+                    }
+                }
+            }
+
+            button {
+                @include forBtn();
+                padding: 10px 15px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    @include btnHover();
+                }
+            }
+        }
+    }
+
+    // for hero section
+
+    .hero {
+        width: 100%;
+        @include flex();
+        margin-top: 10rem;
+
+        article {
+            margin-left: 7rem;
+            @include flex();
+            flex-direction: column;
+            align-items: start;
+            gap: 50px;
+            color: #e3e3e3;
+
+            h2 {
+                font-size: 46px;
+                font-weight: 900;
+            }
+
+            p {
+                font-size: 25px;
+            }
+
+            button {
+                @include forBtn();
+                padding: 15px 20px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                font-size: 18px;
+
+                &:hover {
+                    @include btnHover();
+                }
+            }
+        }
+    }
+}
+
+// category highlight section
