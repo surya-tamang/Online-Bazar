@@ -232,4 +232,28 @@
 .container .highlighted a:hover {
   background-color: #01B7F2;
   color: #ededed;
+}
+.container .clothBanner {
+  height: 250px;
+  width: 90%;
+  margin-top: 50px;
+  position: relative;
+  background: url(./../assets/banner2.jpeg);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .clothBanner::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4862745098);
+  position: absolute;
+}
+.container .clothBanner h3 {
+  color: #e3e3e3;
+  z-index: 6;
+  font-size: 64px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */

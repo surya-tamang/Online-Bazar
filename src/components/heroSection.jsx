@@ -6,6 +6,9 @@ import 'swiper/css/pagination';
 import "./../styling/main.css";
 import earRing from './../assets/earRing.jpg'
 import lotus from './../assets/lotus.png'
+import banner1 from './../assets/banner1.jpg'
+import ac from './../assets/ac.jpg'
+import cloth from './../assets/cloth.jpg'
 
 
 export default function HeroPage() {
@@ -221,8 +224,181 @@ export default function HeroPage() {
                                 <h4>Lotus</h4>
                             </article>
                         </SwiperSlide>
-                        
+
                     </Swiper>
+                </div>
+
+                <div className="banner">
+                    <img src={banner1} alt="" />
+                </div>
+
+                <div className="highlighted">
+                    <h3>Home Appliances</h3>
+
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+
+                        className="mySwiper"
+                        loop="true"
+                    >
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={ac} alt="ear ring" />
+                            <article>
+                                <h4>Air Conditioner</h4>
+                                <p>Rs 15000</p>
+                            </article>
+                        </SwiperSlide>
+
+                    </Swiper>
+
+                    <a href="">Shop more</a>
+                </div>
+
+                <div className="clothBanner">
+                    <h3>20% off in everything</h3>
+                </div>
+
+                <div className="highlighted">
+                    <h3>Fashion and wears</h3>
+
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+
+                        className="mySwiper"
+                        loop="true"
+                    >
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={cloth} alt="cloth" />
+                            <article>
+                                <h4>Black crop tops</h4>
+                                <p>Rs 1500</p>
+                            </article>
+                        </SwiperSlide>
+                        
+
+                    </Swiper>
+
+                    <a href="">Shop more</a>
                 </div>
             </div>
         </>
