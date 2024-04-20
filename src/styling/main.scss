@@ -43,23 +43,46 @@ $accent : #D9D9D9;
     background-size: cover;
     min-height: 100vh;
 
-    // for nav bar
-    .bgChange {
-        background-color: $primary;
-    }
+
 
     nav {
         @include flex();
         justify-content: space-between;
         color: #e3e3e3;
-        position: sticky;
-        top: 0;
 
-        .logo h1 {
-            margin-left: 30px;
-            font-size: 30px;
-            padding: 15px 0;
+        .logo a {
+            h1 {
+                margin-left: 30px;
+                font-size: 30px;
+                padding: 15px 0;
+                color: #e3e3e3;
+            }
         }
+
+        .searchBar {
+            width: 450px;
+            position: relative;
+
+            input[type="search"] {
+                padding: 10px;
+                width: 100%;
+                border-radius: 8px;
+                border: 2px solid $secondary;
+                outline: none;
+            }
+
+            i {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 20px;
+                background-color: $secondary;
+                padding: 9px;
+                border-radius: 8px;
+            }
+        }
+
+
 
         ul {
             margin-right: 30px;
@@ -95,7 +118,7 @@ $accent : #D9D9D9;
             .dropdown {
                 position: relative;
 
-                &:hover .dropdown_list{
+                &:hover .dropdown_list {
                     opacity: 1;
                 }
 
@@ -167,3 +190,111 @@ $accent : #D9D9D9;
 }
 
 // category highlight section
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    @include flex();
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .categoryNav {
+        background-color: $primary;
+        position: sticky;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+
+        ul {
+            @include flex();
+            padding: 0 15px;
+
+            li {
+                padding: 20px 15px;
+
+                a {
+                    color: #e3e3e3;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            span {
+                color: #e3e3e3;
+            }
+        }
+    }
+
+    .highlighted {
+        height: 350px;
+        width: 90%;
+        position: relative;
+        margin: 5rem 0;
+
+        &::after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            background-color: $primary ;
+            top: 25px;
+            left: 0;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: #464343;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                box-shadow: 1px 1px 5px $primary;
+                padding: 20px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 80%;
+                    object-fit: cover;
+
+                }
+
+                article {
+                    height: 20%;
+                    @include flex();
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 15px;
+
+                    h4 {
+                        color: #464343;
+                    }
+                }
+            }
+
+
+        }
+
+        a {
+            color: #01B7F2;
+            @include forBtn();
+            padding: 10px;
+
+            &:hover {
+                @include btnHover();
+            }
+        }
+    }
+
+}

@@ -1,33 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 import "./../styling/main.css";
+import earRing from './../assets/earRing.jpg'
+import lotus from './../assets/lotus.png'
+
 
 export default function HeroPage() {
-    const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 30) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []); // Empty dependency array ensures that this effect only runs once
 
     return (
         <>
-            <div className={isScrolled ? "heropage scrolled" : "heropage"}>
-                <nav className={isScrolled ? "bgChange" : ""}>
+            <div className="heropage" id="home">
+                <nav>
                     <div className="logo">
-                        <h1>SaleMyDop</h1>
+                        <a href="#home"><h1>SaleMyDop</h1></a>
                     </div>
+
+                    <div className="searchBar">
+                        <input type="search" name="search" id="searchBar" placeholder="Search..." />
+                        <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
                     <ul>
                         <li>
                             <a href="#" className="active">
@@ -62,6 +58,171 @@ export default function HeroPage() {
                         <p>Sell and Buy what you like</p>
                         <button>Get Started</button>
                     </article>
+                </div>
+            </div>
+            <div className="container">
+                <div className="categoryNav">
+                    <ul>
+                        <li><a href="">Accessories</a></li><span>|</span>
+                        <li><a href="">Groceries</a></li><span>|</span>
+                        <li><a href="">Fashion</a></li><span>|</span>
+                        <li><a href="">Home appliance</a></li><span>|</span>
+                        <li><a href="">Beauty</a></li><span>|</span>
+                        <li><a href="">Gadgets</a></li><span>|</span>
+                        <li><a href="">Sports & Outdoor</a></li>
+                    </ul>
+                </div>
+
+                <div className="highlighted">
+                    <h3>Summer Accessories</h3>
+
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+
+                        className="mySwiper"
+                        loop="true"
+                    >
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={earRing} alt="ear ring" />
+                            <article>
+                                <h4>Ear ring _ pure handmade</h4>
+                                <p>Rs 150</p>
+                            </article>
+                        </SwiperSlide>
+                    </Swiper>
+
+                    <a href="">Shop more</a>
+                </div>
+
+                <div className="highlighted">
+                    <h3>Top Brands</h3>
+
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+
+                        className="mySwiper"
+                        loop="true"
+                    >
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={lotus} alt="ear ring" />
+                            <article>
+                                <h4>Lotus</h4>
+                            </article>
+                        </SwiperSlide>
+                        
+                    </Swiper>
                 </div>
             </div>
         </>
