@@ -150,14 +150,18 @@
 .container .categoryNav {
   background-color: #464343;
   position: sticky;
-  position: absolute;
   top: 0;
   z-index: 5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
 }
 .container .categoryNav ul {
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 .container .categoryNav ul li {
   padding: 20px 15px;
@@ -170,6 +174,14 @@
 }
 .container .categoryNav ul span {
   color: #e3e3e3;
+}
+.container .categoryNav .links a {
+  padding: 30px;
+  color: white;
+  text-decoration: underline;
+}
+.container .categoryNav .links a:hover {
+  color: #01B7F2;
 }
 .container .highlighted {
   height: 350px;
@@ -200,8 +212,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 1px 1px 5px #464343;
+  box-shadow: 1px 1px 2px #464343;
+  transition: all 0.3s ease;
   padding: 20px;
+  height: 90%;
+}
+.container .highlighted .swiper .swiper-slide:hover {
+  box-shadow: 1px 1px 5px #464343;
 }
 .container .highlighted .swiper .swiper-slide img {
   display: block;
@@ -216,7 +233,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 .container .highlighted .swiper .swiper-slide article h4 {
   color: #464343;
@@ -256,4 +273,40 @@
   z-index: 6;
   font-size: 64px;
   text-transform: uppercase;
+}
+.container footer {
+  background-color: #464343;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.container footer .additional-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 100%;
+}
+.container footer .additional-info .info h4 {
+  margin-bottom: 20px;
+  color: #e3e3e3;
+}
+.container footer .additional-info .info li {
+  padding: 5px 0;
+}
+.container footer .additional-info .info li a {
+  color: #e3e3e3;
+}
+.container footer .additional-info .info li a:hover {
+  color: #01B7F2;
+}
+.container footer .additional-info .info li a span {
+  margin: 0 10px;
+}
+.container footer .copyright {
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */

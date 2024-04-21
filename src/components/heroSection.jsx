@@ -9,9 +9,15 @@ import lotus from './../assets/lotus.png'
 import banner1 from './../assets/banner1.jpg'
 import ac from './../assets/ac.jpg'
 import cloth from './../assets/cloth.jpg'
+import { Navigation, Pagination } from 'swiper/modules';
+import Footer from './footer';
+
+
 
 
 export default function HeroPage() {
+
+
 
 
     return (
@@ -24,7 +30,7 @@ export default function HeroPage() {
 
                     <div className="searchBar">
                         <input type="search" name="search" id="searchBar" placeholder="Search..." />
-                        <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+                        <i id="searchBtn" className="fa-solid fa-magnifying-glass"></i>
                     </div>
 
                     <ul>
@@ -74,6 +80,9 @@ export default function HeroPage() {
                         <li><a href="">Gadgets</a></li><span>|</span>
                         <li><a href="">Sports & Outdoor</a></li>
                     </ul>
+                    <div className="links">
+                        <a href="">Become a seller</a>
+                    </div>
                 </div>
 
                 <div className="highlighted">
@@ -85,6 +94,9 @@ export default function HeroPage() {
                         pagination={{
                             clickable: true,
                         }}
+
+                        modules={[Pagination, Navigation]}
+                        navigation={true}
 
                         className="mySwiper"
                         loop="true"
@@ -167,6 +179,9 @@ export default function HeroPage() {
                             clickable: true,
                         }}
 
+                        modules={[Pagination, Navigation]}
+                        navigation={true}
+
                         className="mySwiper"
                         loop="true"
                     >
@@ -242,6 +257,9 @@ export default function HeroPage() {
                             clickable: true,
                         }}
 
+                        modules={[Pagination, Navigation]}
+                        navigation={true}
+
                         className="mySwiper"
                         loop="true"
                     >
@@ -315,7 +333,7 @@ export default function HeroPage() {
                 </div>
 
                 <div className="clothBanner">
-                    <h3>20% off in everything</h3>
+                    <h3>20% off in Fashion and wears</h3>
                 </div>
 
                 <div className="highlighted">
@@ -327,6 +345,11 @@ export default function HeroPage() {
                         pagination={{
                             clickable: true,
                         }}
+
+                        modules={[Pagination, Navigation]}
+                        navigation={
+                            true
+                        }
 
                         className="mySwiper"
                         loop="true"
@@ -394,12 +417,13 @@ export default function HeroPage() {
                                 <p>Rs 1500</p>
                             </article>
                         </SwiperSlide>
-                        
+
 
                     </Swiper>
 
                     <a href="">Shop more</a>
                 </div>
+                <Footer />
             </div>
         </>
     );
