@@ -9,7 +9,7 @@ import lotus from './../assets/lotus.png'
 import banner1 from './../assets/banner1.jpg'
 import ac from './../assets/ac.jpg'
 import cloth from './../assets/cloth.jpg'
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Footer from './footer';
 
 
@@ -95,8 +95,14 @@ export default function HeroPage() {
                             clickable: true,
                         }}
 
-                        modules={[Pagination, Navigation]}
+                        centeredSlides={true}
+                        modules={[Autoplay, Pagination, Navigation]}
                         navigation={true}
+
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        }}
 
                         className="mySwiper"
                         loop="true"
@@ -179,8 +185,14 @@ export default function HeroPage() {
                             clickable: true,
                         }}
 
-                        modules={[Pagination, Navigation]}
+                        centeredSlides={true}
+                        modules={[Autoplay, Pagination, Navigation]}
                         navigation={true}
+
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        }}
 
                         className="mySwiper"
                         loop="true"
@@ -257,8 +269,14 @@ export default function HeroPage() {
                             clickable: true,
                         }}
 
-                        modules={[Pagination, Navigation]}
+                        centeredSlides={true}
+                        modules={[Autoplay, Pagination, Navigation]}
                         navigation={true}
+
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        }}
 
                         className="mySwiper"
                         loop="true"
@@ -346,10 +364,14 @@ export default function HeroPage() {
                             clickable: true,
                         }}
 
-                        modules={[Pagination, Navigation]}
-                        navigation={
-                            true
-                        }
+                        centeredSlides={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        navigation={true}
+
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        }}
 
                         className="mySwiper"
                         loop="true"

@@ -290,6 +290,7 @@
   justify-content: space-evenly;
   align-items: start;
   width: 100%;
+  position: relative;
 }
 .container footer .additional-info .info h4 {
   margin-bottom: 20px;
@@ -307,6 +308,53 @@
 .container footer .additional-info .info li a span {
   margin: 0 10px;
 }
+.container footer .additional-info .info::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #e3e3e3;
+  bottom: -15px;
+  left: 0;
+}
 .container footer .copyright {
-  margin-top: 20px;
+  margin-top: 25px;
+  color: #e3e3e3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container footer .copyright .imgs {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container footer .copyright .imgs a {
+  width: 100%;
+  height: 100%;
+}
+.container footer .copyright .imgs a img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .heropage {
+    width: 70dvw;
+    overflow: hidden;
+  }
+  .heropage nav {
+    width: 100%;
+    background-color: red;
+  }
+  .heropage nav .logo a h1 {
+    font-size: 18px;
+    padding: 0;
+  }
+  .container {
+    width: 70vw;
+  }
 }/*# sourceMappingURL=main.css.map */
