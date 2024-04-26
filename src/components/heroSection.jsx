@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import ProductSlider from './ProductSlider';
+import { Accessories, Brands, Appliances, Cloth } from './images';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import "./../styling/main.css";
 
 import banner1 from './../assets/banner1.jpg'
 import Footer from './footer';
-import { Accessories, Brands, Appliances, Cloth } from './images';
 
+import "./../styling/main.css";
 
 
 
@@ -88,85 +85,13 @@ export default function HeroPage() {
 
                 <div className="highlighted">
                     <h3>Summer Accessories</h3>
-
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-
-                        centeredSlides={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        navigation={true}
-
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
-                        }}
-
-                        className="mySwiper"
-                        loop="true"
-                    >
-                        {
-                            accessories.map((elem) => {
-                                const { image, name, price } = elem;
-
-                                return (
-                                    <SwiperSlide>
-                                        <img src={image} alt="ear ring" />
-                                        <article>
-                                            <h4>{name}</h4>
-                                            <p>{price}</p>
-                                        </article>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-
-                    </Swiper>
-
+                    <ProductSlider highlight={accessories} />
                     <a href="">Shop more</a>
                 </div>
 
                 <div className="highlighted">
                     <h3>Top Brands</h3>
-
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-
-                        centeredSlides={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        navigation={true}
-
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
-                        }}
-
-                        className="mySwiper"
-                        loop="true"
-                    >
-
-                        {
-                            brands.map((elem) => {
-                                const { image, name } = elem;
-
-                                return (
-                                    <SwiperSlide>
-                                        <img src={image} alt={name} />
-                                        <article>
-                                            <h4>{name}</h4>
-                                        </article>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-                    </Swiper>
+                    <ProductSlider highlight={brands} />
                 </div>
 
                 <div className="banner">
@@ -176,41 +101,7 @@ export default function HeroPage() {
                 <div className="highlighted">
                     <h3>Home Appliances</h3>
 
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-
-                        centeredSlides={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        navigation={true}
-
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
-                        }}
-
-                        className="mySwiper"
-                        loop="true"
-                    >
-                        {
-                            appliance.map((elem) => {
-                                const { image, name, price } = elem;
-
-                                return (
-                                    <SwiperSlide>
-                                        <img src={image} alt="ear ring" />
-                                        <article>
-                                            <h4>{name}</h4>
-                                            <p>{price}</p>
-                                        </article>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-                    </Swiper>
+                    <ProductSlider highlight={appliance} />
 
                     <a href="">Shop more</a>
                 </div>
@@ -221,44 +112,7 @@ export default function HeroPage() {
 
                 <div className="highlighted">
                     <h3>Fashion and wears</h3>
-
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-
-                        centeredSlides={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        navigation={true}
-
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
-                        }}
-
-                        className="mySwiper"
-                        loop="true"
-                    >
-                        {
-                            cloths.map((elem) => {
-                                const { image, name, price } = elem;
-
-                                return (
-                                    <SwiperSlide>
-                                        <img src={image} alt="ear ring" />
-                                        <article>
-                                            <h4>{name}</h4>
-                                            <p>{price}</p>
-                                        </article>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-
-                    </Swiper>
-
+                    <ProductSlider highlight={cloths} />
                     <a href="">Shop more</a>
                 </div>
                 <Footer />
