@@ -53,7 +53,7 @@
 .heropage nav ul li {
   padding: 10px 15px;
 }
-.heropage nav ul li .active {
+.heropage nav ul li a.active {
   color: #01B7F2;
 }
 .heropage nav ul li a {
@@ -98,6 +98,17 @@
   transition: all 0.3s ease;
 }
 .heropage nav ul button:hover {
+  background-color: #01B7F2;
+  color: #ededed;
+}
+.heropage nav ul .loginBtn a {
+  border-radius: 8px;
+  border: 2px solid #01B7F2;
+  background-color: transparent;
+  color: #01B7F2;
+  padding: 10px 15px;
+}
+.heropage nav ul .loginBtn a:hover {
   background-color: #01B7F2;
   color: #ededed;
 }

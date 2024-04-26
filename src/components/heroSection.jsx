@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductSlider from './ProductSlider';
 import { Accessories, Brands, Appliances, Cloth } from './images';
+import { NavLink } from 'react-router-dom'
 
 
 import banner1 from './../assets/banner1.jpg'
@@ -12,18 +13,12 @@ import "./../styling/main.css";
 
 export default function HeroPage() {
 
-    const [accessories, setAccessories] = useState(Accessories);
-    const [brands, setBrands] = useState(Brands);
-    const [appliance, setAppliance] = useState(Appliances);
-    const [cloths, setCloth] = useState(Cloth);
-
-
     return (
         <>
             <div className="heropage" id="home">
                 <nav>
                     <div className="logo">
-                        <a href="#home"><h1>SaleMyDop</h1></a>
+                        <NavLink><h1>SaleMyDop</h1></NavLink>
                     </div>
 
                     <div className="searchBar">
@@ -33,30 +28,30 @@ export default function HeroPage() {
 
                     <ul>
                         <li>
-                            <a href="#" className="active">
-                                Home
-                            </a>
+                            <NavLink exact activeClassName="active" to='/salemydop'> Home</NavLink>
                         </li>
                         <li>
-                            <a href="#">About us</a>
+                            <NavLink exact activeClassName="active" to='/salemydop/about'>About us</NavLink>
                         </li>
                         <li className="dropdown">
-                            <a href="#">Categories</a>
+                            <NavLink exact activeClassName="active" to='/salemydop/cat'>Categories</NavLink>
                             <ul className="dropdown_list">
-                                <li><a href="">Accessories</a></li>
-                                <li><a href="">Groceries</a></li>
-                                <li><a href="">Fashion</a></li>
-                                <li><a href="">Home appliance</a></li>
-                                <li><a href="">Beauty</a></li>
-                                <li><a href="">Gadgets</a></li>
-                                <li><a href="">Sports & Outdoor</a></li>
+                                <li><NavLink to='/salymydop'>Accessories</NavLink></li>
+                                <li><NavLink to='/salymydop'>Groceries</NavLink></li>
+                                <li><NavLink to='/salymydop'>Fashion</NavLink></li>
+                                <li><NavLink to='/salymydop'>Home appliance</NavLink></li>
+                                <li><NavLink to='/salymydop'>Beauty</NavLink></li>
+                                <li><NavLink to='/salymydop'>Gadgets</NavLink></li>
+                                <li><NavLink to='/salymydop'>Sports & Outdoor</NavLink></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">FAQs</a>
+                            <NavLink exact activeClassName="active" to='/salemydop/faqs'>FAQs</NavLink>
                         </li>
 
-                        <button>Log In</button>
+                        <div className="loginBtn">
+                            <NavLink to='/salemydop/login'>Log In</NavLink>
+                        </div>
                     </ul>
                 </nav>
                 <div className="hero">
@@ -85,13 +80,13 @@ export default function HeroPage() {
 
                 <div className="highlighted">
                     <h3>Summer Accessories</h3>
-                    <ProductSlider highlight={accessories} />
+                    <ProductSlider highlight={Accessories} />
                     <a href="">Shop more</a>
                 </div>
 
                 <div className="highlighted">
                     <h3>Top Brands</h3>
-                    <ProductSlider highlight={brands} />
+                    <ProductSlider highlight={Brands} />
                 </div>
 
                 <div className="banner">
@@ -101,7 +96,7 @@ export default function HeroPage() {
                 <div className="highlighted">
                     <h3>Home Appliances</h3>
 
-                    <ProductSlider highlight={appliance} />
+                    <ProductSlider highlight={Appliances} />
 
                     <a href="">Shop more</a>
                 </div>
@@ -112,7 +107,7 @@ export default function HeroPage() {
 
                 <div className="highlighted">
                     <h3>Fashion and wears</h3>
-                    <ProductSlider highlight={cloths} />
+                    <ProductSlider highlight={Cloth} />
                     <a href="">Shop more</a>
                 </div>
                 <Footer />

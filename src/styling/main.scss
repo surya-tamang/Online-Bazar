@@ -43,8 +43,6 @@ $accent : #D9D9D9;
     background-size: cover;
     min-height: 100vh;
 
-
-
     nav {
         @include flex();
         justify-content: space-between;
@@ -91,7 +89,7 @@ $accent : #D9D9D9;
             li {
                 padding: 10px 15px;
 
-                .active {
+                a.active {
                     color: $secondary;
                 }
 
@@ -145,6 +143,17 @@ $accent : #D9D9D9;
 
                 &:hover {
                     @include btnHover();
+                }
+            }
+
+            .loginBtn {
+                a {
+                    @include forBtn();
+                    padding: 10px 15px;
+
+                    &:hover {
+                        @include btnHover();
+                    }
                 }
             }
         }
@@ -445,7 +454,7 @@ $accent : #D9D9D9;
         }
     }
 
-    .container{
+    .container {
         width: 70vw;
     }
 }

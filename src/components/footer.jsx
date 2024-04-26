@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="copyright">
-                    <p>Copyright &copyright 2024  | All rights reserved | SalyMyDop</p>
+                    <p>Copyright &copy; 2024  | All rights reserved | SalyMyDop</p>
                     <div className="imgs">
                         <a href=""><img src={esewa} alt="esewa logo" /></a>
                         <a href=""> <img src={khalti} alt="khalti logo" /></a>
