@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "./../styling/main.css";
-import earRing from './../assets/earRing.jpg'
-import lotus from './../assets/lotus.png'
+
 import banner1 from './../assets/banner1.jpg'
-import ac from './../assets/ac.jpg'
-import cloth from './../assets/cloth.jpg'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Footer from './footer';
+import { Accessories, Brands, Appliances, Cloth } from './images';
 
 
 
 
 export default function HeroPage() {
 
-
+    const [accessories, setAccessories] = useState(Accessories);
+    const [brands, setBrands] = useState(Brands);
+    const [appliance, setAppliance] = useState(Appliances);
+    const [cloths, setCloth] = useState(Cloth);
 
 
     return (
@@ -107,69 +108,22 @@ export default function HeroPage() {
                         className="mySwiper"
                         loop="true"
                     >
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={earRing} alt="ear ring" />
-                            <article>
-                                <h4>Ear ring _ pure handmade</h4>
-                                <p>Rs 150</p>
-                            </article>
-                        </SwiperSlide>
+                        {
+                            accessories.map((elem) => {
+                                const { image, name, price } = elem;
+
+                                return (
+                                    <SwiperSlide>
+                                        <img src={image} alt="ear ring" />
+                                        <article>
+                                            <h4>{name}</h4>
+                                            <p>{price}</p>
+                                        </article>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
+
                     </Swiper>
 
                     <a href="">Shop more</a>
@@ -197,61 +151,21 @@ export default function HeroPage() {
                         className="mySwiper"
                         loop="true"
                     >
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={lotus} alt="ear ring" />
-                            <article>
-                                <h4>Lotus</h4>
-                            </article>
-                        </SwiperSlide>
 
+                        {
+                            brands.map((elem) => {
+                                const { image, name } = elem;
+
+                                return (
+                                    <SwiperSlide>
+                                        <img src={image} alt={name} />
+                                        <article>
+                                            <h4>{name}</h4>
+                                        </article>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
                     </Swiper>
                 </div>
 
@@ -281,70 +195,21 @@ export default function HeroPage() {
                         className="mySwiper"
                         loop="true"
                     >
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={ac} alt="ear ring" />
-                            <article>
-                                <h4>Air Conditioner</h4>
-                                <p>Rs 15000</p>
-                            </article>
-                        </SwiperSlide>
+                        {
+                            appliance.map((elem) => {
+                                const { image, name, price } = elem;
 
+                                return (
+                                    <SwiperSlide>
+                                        <img src={image} alt="ear ring" />
+                                        <article>
+                                            <h4>{name}</h4>
+                                            <p>{price}</p>
+                                        </article>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
                     </Swiper>
 
                     <a href="">Shop more</a>
@@ -376,70 +241,21 @@ export default function HeroPage() {
                         className="mySwiper"
                         loop="true"
                     >
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={cloth} alt="cloth" />
-                            <article>
-                                <h4>Black crop tops</h4>
-                                <p>Rs 1500</p>
-                            </article>
-                        </SwiperSlide>
+                        {
+                            cloths.map((elem) => {
+                                const { image, name, price } = elem;
 
+                                return (
+                                    <SwiperSlide>
+                                        <img src={image} alt="ear ring" />
+                                        <article>
+                                            <h4>{name}</h4>
+                                            <p>{price}</p>
+                                        </article>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
 
                     </Swiper>
 
