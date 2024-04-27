@@ -3,6 +3,8 @@ import HeroPage from './components/heroSection';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './components/login';
+import Footer from './components/footer';
+import SignIn from './components/Signin';
 
 function App() {
 
@@ -13,7 +15,9 @@ function App() {
         <Routes>
           <Route path='/salemydop' element={<HeroPage />} />
           <Route path='/salemydop/login' element={<Login />} />
+          <Route path='/salemydop/signin' element={<SignIn />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )
