@@ -22,7 +22,7 @@ export default function Login() {
 
                         <button>Log In</button>
 
-                        <p>New to SaleMyDop? <NavLink to='/salemydop/signin'>Sign In</NavLink></p>
+                        <p>New to SaleMyDop? <NavLink to='/salemydop/signup'>Sign Up</NavLink></p>
                     </form>
                 </main>
             </div>

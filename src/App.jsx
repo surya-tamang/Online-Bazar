@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/salemydop' element={<HeroPage />} />
           <Route path='/salemydop/login' element={<Login />} />
-          <Route path='/salemydop/signin' element={<SignIn />} />
+          <Route path='/salemydop/signup' element={<SignIn />} />
         </Routes>
         <Footer />
       </BrowserRouter>

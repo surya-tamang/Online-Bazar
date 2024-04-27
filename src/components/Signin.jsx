@@ -23,7 +23,7 @@ export default function SignIn() {
 
 
 
-                        <button>Sign In</button>
+                        <button>Sign Up</button>
 
                         <p>Already hava an account? <NavLink to='/salemydop/login'>Log In</NavLink></p>
                     </form>
